@@ -1,0 +1,126 @@
+.require-container {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkboxLabel {
+  display: block;
+  position: relative;
+  padding-left: 2.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #e6e5ea;
+}
+.checkboxes {
+  margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.checkboxLabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--primary-black);
+  border: 2px solid var(--primary-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkmark:hover {
+  border-color: var(--primary-green);
+}
+
+.checkboxLabel:hover input ~ .checkmark {
+  border-color: var(--primary-green);
+}
+
+.checkboxLabel input:checked ~ .checkmark {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxLabel input:checked ~ .checkmark:after {
+  display: block;
+}
+.strength-container {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-dark-black);
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.strength {
+  font-size: 16px;
+  color: #817d92;
+}
+.strength-name {
+  font-size: 18px;
+  color: #e6e5ea;
+}
+.indicators {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.indicators div {
+  display: flex;
+  gap: 5px;
+}
+.cube {
+  width: 10px;
+  height: 28px;
+  border: solid 2px #e6e5ea;
+}
+.red {
+  background-color: var(--primary-red);
+  border: none;
+}
+.orange {
+  background-color: var(--primary-orange);
+  border: none;
+}
+.yellow {
+  background-color: var(--primary-yellow);
+  border: none;
+}
+.green {
+  background-color: var(--primary-green);
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .strength {
+    font-size: 18px;
+  }
+  .strength-name {
+    font-size: 24px;
+  }
+  .strength-container {
+    padding: 21px;
+  }
+}

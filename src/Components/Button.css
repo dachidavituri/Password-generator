@@ -1,0 +1,33 @@
+button {
+  width: 100%;
+  padding: 18px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #24232c;
+  background-color: #a4ffaf;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+button:hover {
+  background: transparent;
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+}
+button:hover svg path {
+  fill: var(--primary-green);
+}
+@media screen and (min-width: 768px) {
+  button {
+    color: 18px;
+  }
+  button {
+    gap: 24px;
+  }
+}
